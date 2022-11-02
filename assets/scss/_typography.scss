@@ -1,0 +1,107 @@
+.heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 40px;
+}
+.text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+.bold {
+    font-weight: 800;
+}
+.medium {
+    font-weight: 600;
+}
+.normal {
+    font-weight: 400;
+}
+.light {
+    font-weight: 300;
+}
+.italic {
+    font-style: italic;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.underline {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        background: $color-text-regular;
+        height: 1px;
+        pointer-events: none;
+    }
+}
+
+ul.text-list {
+    list-style-type: none;
+
+    li {
+        list-style-type: none;
+        padding: 0 0 0 20px;
+        position: relative;
+        margin: 0;
+        font-size: 16px;
+        line-height: 22px;
+        color: $color-text-regular;
+        &:last-of-type {
+            margin: 0;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $color-text-regular;
+            left: 7px;
+            top: 8px;
+        }
+    }
+}
+
+ol.text-list {
+    list-style-type: none;
+    counter-reset: list-number;
+
+    li {
+        counter-increment: list-number;
+        list-style-type: none;
+        padding: 0 0 0 20px;
+        position: relative;
+        margin: 0;
+        font-size: 16px;
+        line-height: 22px;
+        color: $color-text-regular;
+        &:last-of-type {
+            margin: 0;
+        }
+        &:before {
+            content: counter(list-number ) '. ';
+            position: absolute;
+            font-size: 16px;
+            line-height: 22px;
+            color: $color-text-regular;
+            left: 2px;
+            top: 0;
+        }
+    }
+}

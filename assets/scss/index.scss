@@ -1,0 +1,56 @@
+@import 'variables/index';
+@import 'reset';
+@import 'layout';
+@import 'typography';
+@import 'mixins';
+@import 'base';
+@import 'transitions';
+
+@import 'components/btn-component';
+
+// fonts
+@include font-face('SussieIntl', '@/assets/fonts/SussieIntl/SuisseIntl-Regular', 400);
+@include font-face('SussieIntl', '@/assets/fonts/SussieIntl/SuisseIntl-Medium', 600);
+@include font-face('ObjectSans', '@/assets/fonts/ObjectSans/PPObjectSans-Light', 300);
+@include font-face('ObjectSans', '@/assets/fonts/ObjectSans/PPObjectSans-Regular', 400);
+@include font-face('ObjectSans', '@/assets/fonts/ObjectSans/PPObjectSans-Medium', 600);
+@include font-face('ObjectSans', '@/assets/fonts/ObjectSans/PPObjectSans-Bold', 800);
+@include font-face('ObjectSans', '@/assets/fonts/ObjectSans/PPObjectSans-Slanted', 400, italic);
+@include font-face('ObjectSans', '@/assets/fonts/ObjectSans/PPObjectSans-MediumSlanted', 600, italic);
+@include font-face('ObjectSans', '@/assets/fonts/ObjectSans/PPObjectSans-BoldSlanted', 800, italic);
+
+:root {
+  --background-color-default: #f2f4f5;
+  --background-color-aside: #ffffff;
+  --border-aside: #e4e7eb;
+  --color-text-regular: #242b33;
+  --background-header: #11151a;
+  --header-title: #f2f4f5;
+  --footer-text: #697480;
+  --background-footer: #11151a;
+  --footer-link: #ffffff;
+}
+
+body {
+  font-family: $font-family-default;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+  font-weight: $font-weight-normal;
+  color: var(--color-text-regular);
+  background: var(--background-color-default);
+  &.fixed {
+    overflow: hidden;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #FFFFFF;
+        z-index: 1;
+        pointer-events: none;
+    }
+  }
+}

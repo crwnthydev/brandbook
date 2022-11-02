@@ -1,0 +1,12 @@
+.switchlayout-enter-active, .page-leave-active {
+    transition: opacity .6s ease-in-out;
+}
+.switchlayout-enter, .page-leave-active {
+    opacity: 0;
+}
+.switchpage-enter-active, .page-leave-active {
+    transition: opacity .6s ease-in-out;
+}
+.switchpage-enter, .page-leave-active {
+    opacity: 0;
+}

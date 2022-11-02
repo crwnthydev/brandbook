@@ -1,0 +1,19 @@
+@import 'font';
+@import 'colors';
+@import 'breakpoints';
+
+html {
+    scroll-behavior: smooth;
+	--site-paddings: 20px;
+	--container-width: 832;
+	--indent-col: 20px;
+	--header-height: 64px;
+	--menu-toggle-size: 64px;
+	@media (max-width: $breakpoint-sm) {
+		--indent-col: 16px;
+	}
+	@media (max-width: $breakpoint-xs) {
+		--header-height: 40px;
+		--menu-toggle-size: 40px;
+	}
+}
